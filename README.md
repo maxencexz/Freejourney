@@ -21,11 +21,11 @@ npm install freejourney
 ## Usage
 First, import the Freejourney API client:
 ```js
-const Freejourney = require('freejourney');
+const freejourney = require('freejourney');
 ```
 Then, create a new instance of the Freejourney API client with your API key:
 ```js
-const freejourney = new Freejourney('your_api_key');
+const Rreejourney = new Freejourney('your_api_key');
 ```
 Now you can use the various methods provided by the Freejourney API client:
 
