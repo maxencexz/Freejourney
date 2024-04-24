@@ -1,0 +1,38 @@
+{
+    "BASE": "https://api.freejourney.xyz/",
+    "CHAT_COMPLETION": {
+        "ChatGPT-4": "chat/chatgpt-4",
+        "ChatGPT-4-34k": "chat/chatgpt-4-34k",
+        "ChatGPT-3-5-Turbo": "chat/chatgpt-3-5-turbo",
+        "ChatGPT-3-5-Turbo-16k": "chat/chatgpt-3-5-turbo-16k",
+        "Gemini": "chat/gemini",
+        "Characters": "chat/characters"
+    },
+    "FUN": {
+        "DadJoke": "fun/dadjoke",
+        "Trivia": "fun/trivia",
+        "RandomFact": "fun/randomfact"
+    },
+    "ANIMALS": {
+        "DogFact": "animals/dogfact",
+        "CatFact": "animals/catfact"
+    },
+    "MODERATION": {
+        "TextFilter": "moderation/text/filter"
+    },
+    "IMAGES": {
+        "QRCode": "images/qrcode",
+        "RemoveBackground": "images/removebackground",
+        "ScrollOfTruth": "images/scrolloftruth",
+        "MinecraftAchievement": "images/minecraftachievement",
+        "MinecraftChallenge": "images/minecraftchallenge",
+        "Calling": "images/calling",
+        "Captcha": "images/captcha",
+        "DidYouMean": "images/didyoumean",
+        "Facts": "images/facts",
+        "PornHubBrand": "images/pornhubbrand",
+        "Midjourney": "images/midjourney",
+        "DALLE": "images/dalle",
+        "STABLE_DIFFUSION": "images/stablediffusion"
+    }
+}
