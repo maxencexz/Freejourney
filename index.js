@@ -1,5 +1,4 @@
 const axios = require("axios").default
-
 const endpoints = require("./src/constants/endpoints.json")
 
 class Freejourney {
