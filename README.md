@@ -514,16 +514,22 @@ Searches for images created with the Midjourney bot.
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `query` | `string` | **Required**. The text to use for the search. |
-| `number` | `string` | **Required**. The number of images to return; can only be 1 or 4. |
 
 ```js
-const result = await Freejourney.images.searchMidjourneyImages(query, number);
+const result = await Freejourney.images.searchMidjourneyImages(query);
 ```
 
 ```json
-{
-    "base64": "...."
-}
+[
+    {
+        "url": "https://cdn.discordapp.com/attachments/997271832405225572/1233353755777568768/vivek.pal_Create_a_Labrador_cute_dog_wearing_Engineers_Safety_H_7d858f24-79cd-45f8-83a1-27baba6f7914.png?ex=662cc9b1&is=662b7831&hm=415260c83ab1dbab597ca7bcb21d917ab82189f7680fd3df3392667738830506&",
+        "prompt": "Create a Labrador cute dog wearing Engineers Safety Helmet on laboue day, in white theme"
+    },
+    {
+        "url": "...",
+        "prompt": "..."
+    }
+]
 ```
 
 #### DALL-E Search

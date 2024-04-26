@@ -643,26 +643,25 @@ class Freejourney {
             /**
              * Searches for images created with the Midjourney bot.
              * @param {string} query - The text to use for the search.
-             * @param {number} number - The number of images to return; can only be 1 or 4.
-             * @returns {Promise<{ base64?: string }>} A promise resolving to an object containing the base64-encoded image(s) of the search result.
+             * @returns {Promise<{ url: string, prompt: string }[]>} A promise resolving to an array of objects containing the URL and prompt of the search result images.
              * @example
              * // Usage example:
-             * const result = await Freejourney.images.searchMidjourneyImages("Batman", 1);
-             * 
-             * if (result.base64) {
-             *     console.log(result.base64);
-             *     // Output: "data:image/png;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD......"
+             * const result = await Freejourney.images.searchMidjourneyImages("Batman");
+             * if (result.length > 0) {
+             *     result.forEach(image => {
+             *         console.log("URL:", image.url);
+             *         console.log("Prompt:", image.prompt);
+             *     });
              * } else {
              *     console.log("No result found.");
              * }
              */
-            searchMidjourneyImages: async (query, number) => {
+            searchMidjourneyImages: async (query) => {
                 try {
                     const request = await axios.post(
                         endpoints.BASE + endpoints.IMAGES.Midjourney,
                         {
-                            query: query,
-                            number: number
+                            query: query
                         },
                         {
                             headers: {
@@ -679,6 +678,7 @@ class Freejourney {
                     throw new Error("Midjourney image search request failed: " + error.message);
                 }
             },
+
 
             /**
              * Searches for images created with DALL-E.
