@@ -532,6 +532,30 @@ const result = await Freejourney.images.searchMidjourneyImages(query);
 ]
 ```
 
+#### Nijijourney Search
+Searches for images created with the Nijijourney bot.
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `query` | `string` | **Required**. The text to use for the search. |
+
+```js
+const result = await Freejourney.images.searchNijijourneyImages(query);
+```
+
+```json
+[
+    {
+        "url": "https://cdn.discordapp.com/attachments/1051067680255393862/1234387546507837511/maxi_0021_simplistic_cute_cartoonish_characters_design_small__c_06af8fa0-7e7a-44e0-8a89-f56c35b0540a.png?ex=66308c7c&is=662f3afc&hm=235670639cf1b567440d1ccfa79afad2741308f27bdb2c818a47e75315c4c135&",
+        "prompt": "simplistic, cute, cartoonish, characters design, small , chibi --ar 3:4 --niji 6"
+    },
+    {
+        "url": "...",
+        "prompt": "..."
+    }
+]
+```
+
 #### DALL-E Search
 Searches for images created with DALL-E.
 
