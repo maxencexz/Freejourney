@@ -187,7 +187,7 @@ class Freejourney {
                     });
                     return request.data.data;
                 } catch (error) {
-                    throw new Error("Gemini request failed: " + error.message);
+                    throw new Error("Character model request failed: " + error.message);
                 }
             }
 
