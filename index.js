@@ -678,6 +678,45 @@ class Freejourney {
                 }
             },
 
+            /**
+             * Searches for images created with the Nijijourney bot.
+             * @param {string} query - The text to use for the search.
+             * @returns {Promise<{ url: string, prompt: string }[]>} A promise resolving to an array of objects containing the URL and prompt of the search result images.
+             * @example
+             * // Usage example:
+             * const result = await Freejourney.images.searchNijijourneyImages("Batman");
+             * if (result.length > 0) {
+             *     result.forEach(image => {
+             *         console.log("URL:", image.url);
+             *         console.log("Prompt:", image.prompt);
+             *     });
+             * } else {
+             *     console.log("No result found.");
+             * }
+             */
+            searchNijijourneyImages: async (query) => {
+                try {
+                    const request = await axios.post(
+                        endpoints.BASE + endpoints.IMAGES.Nijijourney,
+                        {
+                            query: query
+                        },
+                        {
+                            headers: {
+                                'X-Freejourney-Key': this.token
+                            }
+                        }
+                    );
+                    if (request.data.success) {
+                        return request.data.data;
+                    } else {
+                        throw new Error("Nijijourney image search failed: " + request.data.message);
+                    }
+                } catch (error) {
+                    throw new Error("Nijijourney image search request failed: " + error.message);
+                }
+            },
+
 
             /**
              * Searches for images created with DALL-E.
